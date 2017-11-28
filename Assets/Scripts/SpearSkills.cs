@@ -18,15 +18,14 @@ public class SpearSkills : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cooldown == 0)
-        {
             if (Input.GetButtonDown("Fire1"))
             {
                 spear.GetComponent<Transform>().position += stabForward;
-                cooldown = startCooldown;
-                cooldown = -1;
-                print("im stabbing your face");
             }
-        }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                spear.GetComponent<Transform>().position -= stabForward;
+            }
+        
     }
 }
