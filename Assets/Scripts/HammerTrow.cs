@@ -16,9 +16,7 @@ public class HammerTrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(forward * Time.deltaTime * trowSpeed);
-        forward.z = aim.GetComponent<Transform>().position.z;
-        forward.y = aim.GetComponent<Transform>().position.y;
-        forward.x = aim.GetComponent<Transform>().position.x;
+        transform.Translate(forward * Time.deltaTime / trowSpeed);
+        forward = aim.GetComponent<Transform>().position;
     }
 }
