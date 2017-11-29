@@ -6,6 +6,7 @@ public class SwitchWeapon : MonoBehaviour {
     public GameObject hammer;
     public GameObject shield;
     public GameObject spear;
+    public GameObject target;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,12 +19,14 @@ public class SwitchWeapon : MonoBehaviour {
             hammer.SetActive(true);
             shield.SetActive(true);
             spear.SetActive(false);
+            target.SetActive(false);
         }
         if (Input.GetButtonDown("Weapon2"))
         {
             hammer.SetActive(false);
             shield.SetActive(false);
             spear.SetActive(true);
+            target.SetActive(true);
         }
     }
 }
