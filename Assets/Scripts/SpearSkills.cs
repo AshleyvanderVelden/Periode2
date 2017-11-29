@@ -5,11 +5,8 @@ using UnityEngine;
 public class SpearSkills : MonoBehaviour
 {
     public GameObject spear;
-    public Vector3 stabForward;
     public GameObject targetPoint;
-    public int stabTimer;
-    public int cooldown;
-    public int startCooldown;
+    public GameObject spearReturn;
     // Use this for initialization
     void Start()
     {
@@ -21,11 +18,11 @@ public class SpearSkills : MonoBehaviour
     {
             if (Input.GetButtonDown("Fire1"))
             {
-                spear.GetComponent<Transform>().position += targetPoint.GetComponent<Transform>().position;
+                spear.GetComponent<Transform>().position = targetPoint.GetComponent<Transform>().position;
             }
             if (Input.GetButtonUp("Fire1"))
             {
-                spear.GetComponent<Transform>().position -= targetPoint.GetComponent<Transform>().position;
+                spear.GetComponent<Transform>().position = spearReturn.GetComponent<Transform>().position;
             }
         
     }

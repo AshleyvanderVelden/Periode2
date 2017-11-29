@@ -20,7 +20,7 @@ public class TestRotate : MonoBehaviour {
        
         vectorTwee.y = Input.GetAxis("Mouse X");
 
-        transform.Rotate(vectorTwee * Time.deltaTime*rotateSpeed);
+        transform.Rotate(vectorTwee * Time.deltaTime * rotateSpeed);
 
         hor = Input.GetAxis("Horizontal");
         ver = Input.GetAxis("Vertical");
