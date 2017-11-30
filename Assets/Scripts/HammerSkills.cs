@@ -7,8 +7,10 @@ public class HammerSkills : MonoBehaviour {
     public GameObject liftUp;
     public GameObject returnpoint;
     //skill 2 variabelen V
-    public GameObject projectile;
-    public GameObject spawnlocation;
+    public GameObject skill;
+    public GameObject areaOfEffect;
+    public int skillProgression;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -26,7 +28,12 @@ public class HammerSkills : MonoBehaviour {
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Instantiate(projectile,spawnlocation.GetComponent<Transform>().position,Quaternion.identity);
+            areaOfEffect.SetActive(true);
+        }
+        if (Input.GetButtonUp("Fire2"))
+        {
+            areaOfEffect.SetActive(false);
+            skill.SetActive(true);
         }
     }
 }
