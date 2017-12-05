@@ -19,10 +19,8 @@ public class HammerSmash : MonoBehaviour {
         if (col.gameObject.tag == "Enemy")
         {
             Destroy(col.gameObject);
-            hammer.GetComponent<Transform>().position = returnLocation.GetComponent<Transform>().position;
-            hammer.SetActive(false);
         }
-        else
+        if (col.gameObject.tag == "Ground")
         {
             hammer.GetComponent<Transform>().position = returnLocation.GetComponent<Transform>().position;
             hammer.SetActive(false);
