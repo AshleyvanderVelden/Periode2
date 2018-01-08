@@ -5,6 +5,8 @@ using UnityEngine;
 public class HammerSmash : MonoBehaviour {
     public GameObject hammer;
     public GameObject returnLocation;
+    public int skilldamage;
+    //skill damage
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +20,7 @@ public class HammerSmash : MonoBehaviour {
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<EnemyManager>().health -= skilldamage;
         }
         if (col.gameObject.tag == "Ground")
         {

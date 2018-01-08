@@ -9,14 +9,17 @@ public class HammerSkills : MonoBehaviour
     public GameObject hammer;
     public GameObject liftUp;
     public GameObject returnpoint;
-    //skill 2 variabelen V
+    //skill 2 variabelen hammer
     public GameObject skill;
     public GameObject areaOfEffect;
     //spear
     public GameObject spear;
     public GameObject targetPoint;
     public GameObject spearReturn;
-
+    //cooldown voor skill
+    public int cooldown;
+    public int cooldownMax;
+    public bool cooldownStart;
     // Use this for initialization
     void Start()
     {
@@ -29,7 +32,15 @@ public class HammerSkills : MonoBehaviour
         weaponSwitch = GetComponent<SwitchWeapon>().weapons;
         //hammer skills
         if (weaponSwitch == false)
-        {
+        {   
+            if(cooldownStart == true)
+            {
+                cooldown = cooldown - 1;
+                if (cooldown <= 0)
+                {
+                    cooldownStart = false;
+                }
+            }
             if (Input.GetButtonDown("Fire1"))
             {
                 hammer.GetComponent<Transform>().position = liftUp.GetComponent<Transform>().position;
@@ -38,18 +49,28 @@ public class HammerSkills : MonoBehaviour
             {
                 hammer.GetComponent<Transform>().position = returnpoint.GetComponent<Transform>().position;
             }
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButton("Fire2") && cooldown == 0)
             {
                 areaOfEffect.SetActive(true);
             }
-            if (Input.GetButtonUp("Fire2"))
+            if (Input.GetButtonDown("Fire2") && cooldown != 0)
             {
+                print("on cooldown");
+            }
+            if (Input.GetButtonUp("Fire2") && cooldown == 0)
+            {
+                cooldown = cooldownMax;
                 areaOfEffect.SetActive(false);
                 skill.SetActive(true);
+                cooldownStart = true;
+            }
+            if (Input.GetButtonUp("Fire2") && cooldown != 0)
+            {   
+                print("on cooldown");
             }
         }
         //spear skills
-        if(weaponSwitch == true)
+        if (weaponSwitch == true)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -60,5 +81,5 @@ public class HammerSkills : MonoBehaviour
                 spear.GetComponent<Transform>().position = spearReturn.GetComponent<Transform>().position;
             }
         }
-     }
+    }
 }

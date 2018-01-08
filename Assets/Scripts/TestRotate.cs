@@ -10,6 +10,7 @@ public class TestRotate : MonoBehaviour {
     public float movementSpeed;
     public float rotateSpeed;
     public Vector3 vectorTwee;
+    public int score;
 	// Use this for initialization
 	void Start () {
 		

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwitchWeapon : MonoBehaviour {
     public GameObject hammer;
-    public GameObject shield;
     public GameObject spear;
     public GameObject target;
     public GameObject hammerLift;
@@ -20,7 +19,6 @@ public class SwitchWeapon : MonoBehaviour {
         {
             hammer.SetActive(true);
             hammerLift.SetActive(true);
-            shield.SetActive(true);
             spear.SetActive(false);
             target.SetActive(false);
             weapons = false;
@@ -29,7 +27,6 @@ public class SwitchWeapon : MonoBehaviour {
         {
             hammer.SetActive(false);
             hammerLift.SetActive(false);
-            shield.SetActive(false);
             spear.SetActive(true);
             target.SetActive(true);
             weapons = true;
