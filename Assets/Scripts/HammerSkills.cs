@@ -30,6 +30,7 @@ public class HammerSkills : MonoBehaviour
     void Update()
     {
         weaponSwitch = GetComponent<SwitchWeapon>().weapons;
+
         //hammer skills
         if (weaponSwitch == false)
         {   

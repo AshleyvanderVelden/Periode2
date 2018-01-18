@@ -8,13 +8,13 @@ public class EnemyManager : MonoBehaviour {
     public int walkSpeed;
     //health
     public float health;
-    public float slimeDmg;
+    public float golemDmg;
     //spawner
     public GameObject enemy;
     public Vector3 location;
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
+        player = GameObject.FindWithTag("Player");
 
     }
 	
@@ -32,7 +32,7 @@ public class EnemyManager : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            col.gameObject.GetComponent<PlayerHealth>().playerHp -= slimeDmg ;
+            col.gameObject.GetComponent<PlayerHealth>().playerHp -= golemDmg ;
         }
     }
 }

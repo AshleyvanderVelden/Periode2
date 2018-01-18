@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d5325141e91bf4aa408246801cd92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1431830966546320, guid: fd68afbe732dabd4c9ca9780cafb298e, type: 2}
+  player: {fileID: 1676701977421006, guid: fd68afbe732dabd4c9ca9780cafb298e, type: 2}
   walkSpeed: 2
   health: 100
   slimeDmg: 50
-  enemy: {fileID: 0}
+  enemy: {fileID: 1307070072928654}
   location: {x: 0, y: 0, z: 0}

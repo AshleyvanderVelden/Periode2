@@ -10,7 +10,6 @@ public class HeartRotate : MonoBehaviour {
 	void Start () {
 		
 	}
-	
 	// Update is called once per frame
 	void Update () {
         transform.Rotate(circle * Time.deltaTime * speed);

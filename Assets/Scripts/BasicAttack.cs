@@ -7,7 +7,7 @@ public class BasicAttack : MonoBehaviour {
     public float playerdamage;
 	// Use this for initialization
 	void Start () {
-        enemy = GameObject.Find("Enemy");
+        enemy = GameObject.FindWithTag("Enemy");
     }
 	
 	// Update is called once per frame

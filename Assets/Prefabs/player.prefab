@@ -133,8 +133,10 @@ GameObject:
   - component: {fileID: 114529837712628710}
   - component: {fileID: 114017688184382478}
   - component: {fileID: 114698887893882142}
+  - component: {fileID: 114111733081306842}
   - component: {fileID: 54537948962046010}
   - component: {fileID: 114305643954238264}
+  - component: {fileID: 114306153242630554}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1053,6 +1055,8 @@ MonoBehaviour:
   spear: {fileID: 1886219918919758}
   target: {fileID: 1589329908827990}
   hammerLift: {fileID: 1417781512528560}
+  shield: {fileID: 0}
+  consumeText: {fileID: 0}
   weapons: 0
 --- !u!114 &114102315567077584
 MonoBehaviour:
@@ -1067,6 +1071,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   playerdamage: 20
+--- !u!114 &114111733081306842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676701977421006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7107820eca048a747805b449a96a8b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1676701977421006}
+  startScherm: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!114 &114288613339433952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1106,6 +1124,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: 250
   killCount: 0
+--- !u!114 &114306153242630554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676701977421006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be624701d9154074381d6cc1df580f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particals: {fileID: 0}
+  skilldmg: 0
+  buffOn: 0
 --- !u!114 &114318428288152684
 MonoBehaviour:
   m_ObjectHideFlags: 1
