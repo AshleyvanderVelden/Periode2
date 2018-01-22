@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject chainerThree;
     public GameObject chainerFour;
     public GameObject gameOver;
+    public GameObject finalScore;
     // Use this for initialization
     void Start () {
 		
@@ -41,6 +42,7 @@ public class PlayerHealth : MonoBehaviour {
             spawnFour.SetActive(false);
             spawnFive.SetActive(false);
             gameOver.SetActive(true);
+            finalScore.GetComponent<Text>().text = killConverter;
             Cursor.lockState = CursorLockMode.None;
         }
         if (killCount == 10)
