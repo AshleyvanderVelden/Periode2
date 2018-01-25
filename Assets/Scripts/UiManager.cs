@@ -47,4 +47,8 @@ public class UiManager : MonoBehaviour {
         control.SetActive(false);
         startScherm.SetActive(true);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

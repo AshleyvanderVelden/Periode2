@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocations: {fileID: 4773167831703514}
-  whatToSpawnPrefab: {fileID: 1267392254781670, guid: 3be177858966dc24fa27d37080bd0860,
+  whatToSpawnPrefab: {fileID: 1435708253478574, guid: 3be177858966dc24fa27d37080bd0860,
     type: 2}
-  whatToSpawnClone: {fileID: 1267392254781670, guid: 3be177858966dc24fa27d37080bd0860,
+  whatToSpawnClone: {fileID: 1435708253478574, guid: 3be177858966dc24fa27d37080bd0860,
     type: 2}
   count: 0
   wait: 350

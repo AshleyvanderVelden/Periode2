@@ -15,13 +15,10 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject spawnThree;
     public GameObject spawnFour;
     public GameObject spawnFive;
-    public GameObject spawnSix;
-    public GameObject chainerOne;
-    public GameObject chainerTwo;
-    public GameObject chainerThree;
-    public GameObject chainerFour;
     public GameObject gameOver;
     public GameObject finalScore;
+    public GameObject battleMusic;
+    public GameObject deathMusic;
     // Use this for initialization
     void Start () {
 		
@@ -42,35 +39,26 @@ public class PlayerHealth : MonoBehaviour {
             spawnFour.SetActive(false);
             spawnFive.SetActive(false);
             gameOver.SetActive(true);
+            battleMusic.SetActive(false);
+            deathMusic.SetActive(true);
             finalScore.GetComponent<Text>().text = killConverter;
             Cursor.lockState = CursorLockMode.None;
         }
         if (killCount == 10)
         {
-            spawnOne.SetActive(false);
             spawnTwo.SetActive(true);
-            chainerOne.SetActive(false);
         }
         if(killCount == 15)
         {
-            spawnTwo.SetActive(false);
-            chainerTwo.SetActive(false);
             spawnThree.SetActive(true);
-            spawnFour.SetActive(true);
         }
         if (killCount == 30)
         {
-            spawnTwo.SetActive(true);
-            chainerThree.SetActive(false);
+            spawnFour.SetActive(true);
         }
         if (killCount == 40)
         {
             spawnFive.SetActive(true);
-            chainerFour.SetActive(false);
-        }
-        if (killCount == 50)
-        {
-            spawnSix.SetActive(true);
         }
     }
 }

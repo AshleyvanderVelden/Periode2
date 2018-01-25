@@ -15,7 +15,6 @@ public class EnemyManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindWithTag("Player");
-
     }
 	
 	// Update is called once per frame
